@@ -36,9 +36,11 @@ def weebhook():
                     # Extracting text message
                     if 'text' in messaging_event['message']:
                         messaging_text = messaging_event['message']['text']
+                        if messaging_text.lower() in ['hi', 'hello', 'hey']:
+                            response = "Hey How are you"
+
                 else:
                     messaging_text = ''
-                response = messaging_text
                 bot.send_text_message(sender_id, response)
     return "ok", 200
 
