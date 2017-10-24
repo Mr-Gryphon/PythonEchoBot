@@ -37,7 +37,9 @@ def weebhook():
                     if 'text' in messaging_event['message']:
                         messaging_text = messaging_event['message']['text']
                         if messaging_text.lower() in ['hi', 'hello', 'hey']:
-                            response = "Hey How are you"
+                            response = "Hello User !! How are You ? "
+                        else:
+                            response = messaging_text
 
                 else:
                     messaging_text = ''
